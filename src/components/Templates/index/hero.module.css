@@ -1,0 +1,14 @@
+.custom-overflow-top {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .custom-overflow-top::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust this value based on your needs */
+    left: 0;
+    right: 0;
+    height: 10px; /* Adjust to the height of the overflow */
+    background-color: transparent;
+  }
