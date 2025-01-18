@@ -12,6 +12,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'bg-orange-700': '#FA5A2A',
+        'gray-color': '#383A40', // color for top navbar and footer copy write
+
       },
     },
     container: {

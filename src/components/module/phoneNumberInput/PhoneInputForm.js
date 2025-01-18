@@ -7,7 +7,7 @@ export default function PhoneInputComponent() {
   const [phone, setPhone] = useState('');
 
   return (
-    <div className="w-full flex items-center relative" dir='ltr' lang='en'>
+    <div className="w-full dark:bg-slate-700 flex items-center relative" dir='ltr' lang='en'>
     
       <PhoneInput
         country={'ir'} 
@@ -16,7 +16,8 @@ export default function PhoneInputComponent() {
         inputStyle={{
           width: '100%',
           direction:'ltr',
-          height: '38px',
+          // width:'220px',
+          height: '56px',
           border: '1px solid #D1D5DB', 
           borderRadius: '0.375rem',
           paddingLeft: '48px', 

@@ -7,7 +7,7 @@ import { IoIosArrowBack } from "react-icons/io";
 
 export default function Hero() {
   return (
-    <div className="bg-orange-600 text-white md:py-8 flex flex-col md:flex-row items-center md:h-52">
+    <div className="bg-orange-600 h-[351px] text-white md:py-8 flex flex-col md:flex-row items-center md:h-52">
     {/* Left Column: Text */}
     <div className="md:flex-1 mx-4 md:mx-24 my-8 text-center md:text-left order-2 md:order-1">
       <p className="text-2xl text-right md:text-2xl font-bold">پنل مسافران</p>
@@ -15,7 +15,7 @@ export default function Hero() {
         در طول سفرهای شخصی یا تجاری خود، با به اشتراک گذاشتن فضای خالی چمدان خود با دیگران، علاوه بر تجربه‌ی
         مسافرتی جذاب با روشی نوین و امن کسب درآمد داشته باشند.
       </p>
-      <button className="flex mt-4  items-center justify-center px-4 py-3 rounded-md bg-white text-orange-700">
+      <button className="flex mt-4  items-center justify-center w-[221px] h-[56px] rounded-md bg-white text-orange-700">
         <CiCalculator1 className="ml-2" />
         برآورد پرداخت مسافر
         <IoIosArrowBack className="mr-2" />

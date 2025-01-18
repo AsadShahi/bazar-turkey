@@ -1,5 +1,5 @@
 'use client'
-import React, { useState ,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CiHome, CiUser } from "react-icons/ci";
 import { TiShoppingBag } from 'react-icons/ti'
 import { MdOutlinePersonOutline } from "react-icons/md";
@@ -21,29 +21,26 @@ export default function Navbar() {
 
   return (
 
-    <div className='dark:bg-slate-700'>
+    <div className='dark:bg-slate-700 md:[204px]'>
 
 
-      <div className=' mb-0 bg-slate-800 py-3'>
+      <div className="mb-0  flex items-center h-[58px]" style={{ backgroundColor: '#383A40' }} >
+        <div className="flex items-center justify-between space-x-4 mx-8 text-white w-full">
 
-        <div className='flex items-center justify-between space-x-4 mx-8 text-white'>
 
-          <div>
-
+          <div className="text-sm sm:text-base">
             <p>به وبسایت بازار ترکیه خوش امدید</p>
           </div>
 
-
-          <div className='flex items-center justify-rounded '>
-            <IoIosArrowDown className="ml-2" />
-            <p>ایران/تومان</p>
-            <FaFlagUsa className='mr-2' />
-
+          <div className="flex items-center justify-between space-x-2 sm:space-x-4">
+            <div className="flex items-center space-x-2">
+              <IoIosArrowDown className="ml-2" />
+              <p className="text-sm sm:text-base">ایران/تومان</p>
+            </div>
+            <FaFlagUsa className="mr-2" />
           </div>
 
-
         </div>
-
       </div>
 
 
@@ -54,17 +51,17 @@ export default function Navbar() {
           <Link href="/cart" className="text-orange-600 transition">
             <IoCartOutline className="text-2xl ml-3" />
           </Link>
-          
+
           <button className="text-orange-600 bg-slate-100 p-2 rounded-sm transition">
             <RxHamburgerMenu className="text-2xl" />
           </button>
         </div>
 
         {/* Middle Section - Search Input */}
-        <div className="relative md:order-3 mr-3 w-full md:flex-grow sm:w-full order-3 md:order-2">
+        <div className="relative md:w-[782px] md:order-3 mr-3 w-full md:flex-grow sm:w-full order-3 md:order-2">
           <input
             type="text"
-            className="w-full bg-slate-100 px-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-orange-500"
+            className="w-full text-sm bg-slate-100 px-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-orange-500"
             placeholder="کالای مورد نظر خودرا جستجو کنید"
           />
           <CiSearch className="absolute right-3 text-orange-700 text-lg top-1/2 transform -translate-y-1/2" />
@@ -76,7 +73,7 @@ export default function Navbar() {
             <GoBell className="text-2xl ml-3" />
           </Link>
           {/* toggle button for dark and lighr mode */}
-          <ThemeToggle/>
+          <ThemeToggle />
 
           <Link
             href="/login"
@@ -96,17 +93,19 @@ export default function Navbar() {
       </div>
 
 
-      {/* nav buttons */}
-      <header className="bg-slate-100 shadow ">
 
-        <nav className="hidden container mb-5 mt-5 py-5 mx-auto md:flex justify-between items-center space-x-6 space-x-reverse">
-          
-          <ul className="flex items-center space-x-4 space-x-reverse">
+
+      {/* nav buttons */}
+      <div className=" bg-slate-100 dark:bg-slate-700 h-[64px] border-b-2 flex items-center shadow ">
+
+        <nav className=" container  mb-5 mt-5 mx-auto md:flex justify-between items-center space-x-6 space-x-reverse">
+
+          <ul className="flex md:w-[997px]  md:h-[34px] items-center space-x-4 space-x-reverse">
 
             <li>
               <Link
                 href="/"
-                className="text-gray-600 hover:text-orange-600 transition px-3 flex items-center"
+                className="text-gray-600  dark:text-white hover:text-orange-600 transition px-3 flex items-center"
               >
                 <CiHome className="ml-1" />
                 خانه
@@ -116,7 +115,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/"
-                className="text-gray-600 hover:text-orange-600 transition px-2 flex items-center"
+                className="text-gray-600   dark:text-white hover:text-orange-600 transition px-2 flex items-center"
               >
                 <AiOutlineGlobal className="ml-1" />
                 بخش های از سایت
@@ -127,14 +126,14 @@ export default function Navbar() {
             <li>
               <Link
                 href="#"
-                className="text-gray-600 hover:text-orange-600 transition px-2 flex items-center"
+                className="text-gray-600  dark:text-white  hover:text-orange-600 transition px-2 flex items-center"
               >
                 <TiShoppingBag className="ml-1" />
                 فروشنده شوید
               </Link>
             </li>
 
-            <li className='bg-orange-600 px-3 py-1 rounded-sm'>
+            <li className='bg-orange-600  dark:text-white px-3 py-1 rounded-sm'>
               <Link
                 href="/"
                 className="text-white    px-2 flex items-center"
@@ -146,18 +145,18 @@ export default function Navbar() {
 
           </ul>
 
-          
-          <div className="flex space-x-4 space-x-reverse border-l pl-4">
+
+          <div className="flex md:[230px] space-x-reverse  ">
             <a
               href="/"
-              className="text-gray-600 hover:text-orange-600 transition px-2 flex items-center"
+              className="text-gray-600  dark:text-white hover:text-orange-600 border-l-2 border-slate-300 transition px-2 flex items-center"
             >
               <RiQrScan2Line className="ml-1" />
               پیگری سفارشات
             </a>
             <a
               href="/"
-              className="text-gray-600 hover:text-orange-600 transition px-2 flex items-center"
+              className="text-gray-600  dark:text-white hover:text-orange-600 transition px-2 flex items-center"
             >
               <AiOutlineShoppingCart className="ml-1" />
               سبد خرید
@@ -166,7 +165,9 @@ export default function Navbar() {
         </nav>
 
 
-      </header>
+      </div>
+
+
     </div>
 
   );

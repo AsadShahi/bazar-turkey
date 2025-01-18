@@ -1,5 +1,5 @@
 import React from 'react'
-import PassengerForm from '@/components/Templates/passengerPanelForm/PassengerForm'
+import PassengerForm from '@/components/Templates/passengerPanel/PassengerForm'
 
 import Navbar from '@/components/module/navabar/Navbar';
 import Story from '@/components/Templates/index/Story';
