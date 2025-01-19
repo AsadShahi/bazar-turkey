@@ -13,15 +13,14 @@ import Image from 'next/image';
 export default function Footer() {
     return (
 
-        <footer className="flex flex-col justify-center bg-white mt-10 dark:bg-gray-700 dark:text-white text-black py-6">
+        <footer className="flex flex-col justify-center bg-white  dark:bg-gray-700 dark:text-white text-black py-6">
 
+            <div className=' bg-slate-100  translate-y-10  py-24  z-2'></div>
             {/* emty Background */}
-            <div className='container bg-slate-100 -mt-14  py-14  z-2'></div>
 
             <div className='w-full max-w-screen-xl z-30 mx-auto'>
-
                 {/* Support Section */}
-                <div className="container w-full z-10 relative py-4 mb-3 bg-orange-600 flex flex-col sm:flex-row mx-auto px-6 justify-between items-center rounded-md">
+                <div className="container  w-full z-10 relative py-4 mb-3 bg-orange-600 flex flex-col sm:flex-row mx-auto px-6 justify-between items-center rounded-md">
                     <div className="text-center sm:text-left mb-4 sm:mb-0">
                         <p className="text-white">در خصوص سفارشات نیاز به راهنمایی دارید؟</p>
                     </div>
@@ -43,12 +42,12 @@ export default function Footer() {
 
 
 
-                {/* Important Links Section */}
+                {/* Important Links and som links Section */}
                 <div className="container mx-auto px-4 py-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div className="flex flex-wrap gap-6">
 
-                        {/* Quick Access */}
-                        <div>
+                        {/* Quick Access links */}
+                        <div className="flex-1 min-w-[200px]">
                             <h2 className="text-lg font-bold mb-4">دسترسی سریع</h2>
                             <ul className="space-y-2">
                                 <li><Link href="">رهگیری مرسولات</Link></li>
@@ -59,7 +58,7 @@ export default function Footer() {
                         </div>
 
                         {/* Important Links */}
-                        <div>
+                        <div className="flex-1 min-w-[200px]">
                             <h2 className="text-lg font-bold mb-4">لینک های مهم</h2>
                             <ul className="space-y-2">
                                 <li><Link href="">صفحه اصلی</Link></li>
@@ -70,7 +69,7 @@ export default function Footer() {
                         </div>
 
                         {/* Another Important Links */}
-                        <div>
+                        <div className="flex-1 min-w-[200px]">
                             <h2 className="text-lg font-bold mb-4">لینک های مهم</h2>
                             <ul className="space-y-2">
                                 <li><Link href="">صفحه اصلی</Link></li>
@@ -81,20 +80,30 @@ export default function Footer() {
                         </div>
 
                         {/* Contact Information */}
-                        <div className="bg-slate-100 rounded-md p-5">
+                        <div className="flex-1 bg-slate-100 rounded-md p-5 min-w-[399px]">
                             <ul className="space-y-2 text-black">
-                                <li>آدرس: تهران، خیابان نلسون ماندلا (جردن سابق)</li>
-                                <li>شماره تماس: ۰۲۱-۲۱۲۳۴ - ۲۱۲۴۱</li>
-                                <li>آدرس ایمیل: sales@tntiran.com</li>
-                                <li>شنبه تا چهارشنبه: 8 الی 16 - پنجشنبه: 8 الی 13</li>
+                                <li className="border-r-2 border-orange-600 pr-2">
+                                    آدرس: تهران، خیابان نلسون ماندلا (جردن سابق)
+                                </li>
+                                <li className="border-r-2 border-orange-600 pr-2">
+                                    شماره تماس: ۰۲۱-۲۱۲۳۴ - ۲۱۲۴۱
+                                </li>
+                                <li className="border-r-2 border-orange-600 pr-2">
+                                    آدرس ایمیل: sales@tntiran.com
+                                </li>
+                                <li className="border-r-2 border-orange-600 pr-2">
+                                    شنبه تا چهارشنبه: 8 الی 16 - پنجشنبه: 8 الی 13
+                                </li>
                             </ul>
                         </div>
 
                     </div>
                 </div>
 
+
                 {/* About Section */}
-                <div className="container w-full h-[120px] grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-between mb-6 mt-6 mx-auto px-4">
+                
+                <div className="container w-full md:h-[120px]  grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-between mb-6 mt-6 mx-auto px-4">
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
                         <div className="flex items-center justify-center md:justify-start space-x-3">
                             <IoCartOutline className="text-orange-700" size={40} />
@@ -108,11 +117,37 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="flex flex-wrap justify-between gap-4 md:gap-6">
-                        <Image width={120} height={120} alt='DHL Logo' src='/images/dhl_logo.png' />
-                        <Image width={120} height={120} alt='FedEx Logo' src='/images/fedex_logo.jfif' />
-                        <Image width={120} height={120} alt='TNT Logo' src='/images/tnt_logo.jfif' />
+                    {/* logos */}
+                    <div className="hidden sm:flex container justify-between items-center gap-6 md:gap-14 w-full max-w-screen-xl  mx-auto ">
+
+                        <Image
+                            width={120}
+                            height={120}
+                            alt="DHL Logo"
+                            src="/images/dhl_logo.png"
+                            className="max-w-full h-auto mr-24"
+                        />
+
+
+                        <Image
+                            width={120}
+                            height={120}
+                            alt="FedEx Logo"
+                            src="/images/fedexpress.png"
+                            className="max-w-full h-auto"
+                        />
+
+
+                        <Image
+                            width={200}
+                            height={120}
+                            alt="TNT Logo"
+                            src="/images/tnt_logo.png"
+                            className="max-w-full h-auto"
+                        />
                     </div>
+
+
                 </div>
 
             </div>
@@ -122,7 +157,7 @@ export default function Footer() {
                 <div className='container mx-auto mt-2 px-4 py-5'>
                     <div className='flex justify-between items-center text-white'>
                         <div>
-                            <p>تمام حقوق مادی و معنوی این سایت متعلق به ران <span className='text-orange-700'>اکسپرس</span> است</p>
+                            <p className='sm:text-sm'>تمام حقوق مادی و معنوی این سایت متعلق به ران <span className='text-orange-700'>اکسپرس</span> است</p>
                         </div>
                         <div className='flex space-x-4'>
                             <Link href={''}> <FaFacebook className="text-blue-500 mx-3 bg-white p-1 rounded-sm" size={30} /></Link>
@@ -133,6 +168,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+
         </footer>
 
 

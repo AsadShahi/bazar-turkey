@@ -4,17 +4,20 @@ import { CiCamera } from "react-icons/ci";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { IoIosArrowBack } from "react-icons/io";
 import PhoneInputComponent from "../../module/phoneNumberInput/PhoneInputForm";
+import { IoIosArrowForward } from "react-icons/io";
+
 
 export default function PassengerForm() {
   return (
     <div className="container sm:w-full lg:w-[1244px] h-auto sm:h-auto">
+
       <div className="container flex items-center mt-5 justify-between sm:w-full lg:w-[1244px]">
         <p className="font-bold flex items-center border-r-4 border-orange-700 pr-1 mr-1 text-sm sm:text-base md:text-lg lg:text-xl">
           فرم ثبت نام برای دریافت کمک هزینه ارسال بار
         </p>
 
-        <button className="flex items-center justify-between py-2.5 bg-slate-700 rounded-md px-3 text-white text-xs sm:text-sm md:text-base lg:text-lg">
-          <CiBookmarkCheck className="mr-2" />
+        <button className="flex items-center justify-between py-2.5 ml-2 bg-slate-700 rounded-md px-3 text-white text-xs sm:text-sm md:text-base lg:text-lg">
+          <CiBookmarkCheck className="hidden sm:block mr-2 " />
           <p className='text-sm'> دفتر مسافران
           </p>
           <IoIosArrowBack className="ml-2" />
@@ -185,22 +188,41 @@ export default function PassengerForm() {
                 />
               </div>
 
-              {/* Buttons */}
-              <div className="flex items-center justify-between mt-6">
+
+
+              <div className="flex items-center space-x-3">
+
+                <input
+                  type="checkbox"
+                  id="save-info"
+                  className="h-5 w-5 border-2 border-gray-300 rounded-md checked:bg-orange-600 checked:border-orange-600 focus:ring-0"
+                />
+                <label
+                  htmlFor="save-info"
+                  className="text-sm font-bold px-2 text-gray-700 dark:text-white"
+                >
+                  ذخیره اطلاعات مسافر
+                </label>
+              </div>
+
+
+              {/* Buttons previes and next */}
+              <div className="flex items-center justify-between sm:justify-between md:justify-start mt-6">
                 <button
                   type="button"
-                  className="py-2 px-4 bg-gray-500 text-white font-bold rounded-md"
+                  className="py-2 px-4 bg-gray-100 flex items-center text-slate-300 font-bold rounded-md"
                 >
-                  مرحله قبل
+                  <IoIosArrowForward className="ml-2" /> مرحله قبل
                 </button>
 
                 <button
                   type="submit"
-                  className="py-2 px-4 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600 focus:ring-2 focus:ring-orange-400"
+                  className="flex items-center py-2 px-4 mx-4 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600 focus:ring-2 focus:ring-orange-400"
                 >
-                  مرحله بعد
+                  مرحله بعد <IoIosArrowBack className="mr-2" />
                 </button>
               </div>
+
             </form>
           </div>
         </div>

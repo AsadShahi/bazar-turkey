@@ -3,12 +3,12 @@
 import { IoMoonOutline, IoSunnyOutline } from 'react-icons/io5'; // Icons for moon (dark mode) and sun (light mode)
 import { useTheme } from '../../../../context/ThemeContext';
 const ThemeToggle = () => {
+  
   const { darkTheme, setDarkTheme } = useTheme();
-
   return (
-    <div>
-      <button 
-        onClick={() => setDarkTheme(!darkTheme)} 
+    <div className='flex items-center border-gray-200 border-l-2 pl-2 border-indigo-600'>
+      <button
+        onClick={() => setDarkTheme(!darkTheme)}
         className="text-orange-600 transition"
       >
         {darkTheme ? (

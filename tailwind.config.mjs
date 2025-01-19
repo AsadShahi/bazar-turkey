@@ -15,6 +15,7 @@ export default {
         'gray-color': '#383A40', // color for top navbar and footer copy write
 
       },
+      
     },
     container: {
       center: true,
