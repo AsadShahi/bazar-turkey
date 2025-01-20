@@ -15,6 +15,8 @@ import Link from 'next/link';
 import ThemeToggle from '../themeToggle/ThemeToggle';
 import './Navbar.module.css';
 import { BiSolidCategoryAlt } from "react-icons/bi";
+import WorldFlag from 'react-world-flags'; // Import WorldFlag component
+
 
 export default function Navbar() {
   return (
@@ -28,7 +30,8 @@ export default function Navbar() {
               <IoIosArrowDown className="ml-1" />
               <p className="text-sm md:text-base">ایران/تومان</p>
             </div>
-            <FaFlagUsa />
+
+            <WorldFlag code='IR'  width={20} height={20}/>
           </div>
         </div>
       </div>
@@ -42,19 +45,19 @@ export default function Navbar() {
             <IoCartOutline className="text-2xl sm:ml-2"size={40} />
           </Link>
 
-          <button className="order-1 sm:order-2  text-orange-600  bg-gray-100  p-2 rounded transition">
-            <RxHamburgerMenu className="text-2xl " />
+          <button className="order-1 sm:order-2   dark:bg-slate-800 text-orange-600  bg-gray-100  p-2 rounded transition">
+            <RxHamburgerMenu className="text-2xl  " />
           </button>
         </div>
 
         {/* Middle Section - Search Bar */}
-        <div className="relative flex items-center mt-2  md:mt-auto w-full md:w-[782px] md:h-[48px] order-2 md:order-1">
+        <div className="relative  flex items-center mt-2  md:mt-auto w-full md:w-[782px] md:h-[48px] order-2 md:order-1">
           <input
             type="text"
-            className="w-full bg-gray-100 px-10 mx-2 py-2 rounded-lg border border-gray-300 focus:outline-none "
+            className="w-full dark:bg-slate-700 dark:text-white bg-gray-100 px-10 mx-2 py-2 rounded-lg border border-gray-300 focus:outline-none "
             placeholder="کالای مورد نظر خود را جستجو کنید"
           />
-          <CiSearch className="absolute right-3 text-orange-700 text-xl top-1/2 transform -translate-y-1/2" />
+          <CiSearch size={25} className="absolute  dark:text-white right-3 text-orange-700 text-xl top-1/2 transform -translate-y-1/2" />
         </div>
 
 
@@ -62,10 +65,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between space-x-4 rtl:space-x-reverse order-1 md:order-2">
           {/* Notifications Icon */}
           <div className='md:hidden sm:block flex items-center justify-center mx-auto'>
-            <p>BazarTurkey</p>
+            <p className='dark:text-white'>BazarTurkey</p>
 
           </div>
-          <Link href="/notifications" className="text-gray-600 hover:text-orange-600 transition border-l-2 pl-1">
+          <Link href="/notifications" className="text-gray-600 dark:text-orange-700 hover:text-orange-600 transition border-l-2 pl-1">
             <GoBell className="text-2xl" />
           </Link>
 
@@ -78,7 +81,7 @@ export default function Navbar() {
           <div className="hidden sm:flex items-center space-x-4">
             <Link
               href="/login"
-              className="flex items-center text-white bg-orange-600 mx-2 px-3 py-2 rounded-md transition"
+              className="flex items-center dark:bg-slate-800 text-white bg-orange-600 mx-2 px-3 py-2 rounded-md transition"
             >
               <IoLogInOutline className="ml-2" />
               ورود
@@ -86,7 +89,7 @@ export default function Navbar() {
 
             <Link
               href="/register"
-              className="flex items-center text-orange-600 border border-orange-600 px-3 py-2 rounded-md transition"
+              className="flex items-center  dark:bg-slate-800 text-orange-600 border border-orange-600 px-3 py-2 rounded-md transition"
             >
               <CiUser className="ml-2" size={20} />
               عضویت
@@ -140,7 +143,7 @@ export default function Navbar() {
                 فروشنده شوید
               </Link>
             </li>
-            <li className="bg-orange-600 dark:text-white px-3 py-1 rounded-sm">
+            <li className="bg-orange-600  dark:bg-slate-800 dark:text-white px-3 py-1 rounded-sm">
               <Link
                 href="/"
                 className="text-white px-2 flex items-center"

@@ -15,10 +15,10 @@
   src: url("/fonts/YekanBakh/fonts/woff/YekanBakh-Regular.woff");
 }
 
-@font-face {
+/* @font-face {
   font-family: yekan-bold-Bold;
   src: url("/fonts/shabnam/Shabnam-Bold.woff");
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {

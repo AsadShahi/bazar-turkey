@@ -6,6 +6,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import Link from 'next/link'
 
 export default function Story() {
   const slides = [
@@ -32,29 +33,32 @@ export default function Story() {
           spaceBetween={10}
           slidesPerView={1} // Default for extra small screens
           loop={true}
-          autoplay={{delay:2000}}
+          autoplay={{ delay: 2000 }}
           rewind={true}
-           modules={[Autoplay]}
+          modules={[Autoplay]}
           breakpoints={{
-            
-            360: { slidesPerView: 4 }, 
-            480: { slidesPerView: 5}, 
-            640: { slidesPerView: 5 }, 
-            768: { slidesPerView: 12 }, 
-            1024: { slidesPerView: 12 }, 
+
+            360: { slidesPerView: 4 },
+            480: { slidesPerView: 5 },
+            640: { slidesPerView: 5 },
+            768: { slidesPerView: 12 },
+            1024: { slidesPerView: 12 },
           }}
-          
+
           className="swiper-container"
         >
           {slides.map((slide) => (
+
             <SwiperSlide key={slide.id}>
               <div className="text-center">
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-orange-500 p-1 mx-auto">
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    className="w-full h-full rounded-full"
-                  />
+                  <Link href={'/story-1'}>
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full h-full rounded-full"
+                    />
+                  </Link>
                 </div>
                 <p className="text-sm mt-2">{slide.title}</p>
               </div>

@@ -1,42 +1,116 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css'; // Import default styles
+import WorldFlag from 'react-world-flags'; // Import WorldFlag component
 
-export default function PhoneInputComponent() {
-  const [phone, setPhone] = useState('');
+
+
+// Function to convert English numerals to Persian numerals
+const convertToPersianNumbers = (input) => {
+  const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+  return input.replace(/[0-9]/g, (match) => persianNumbers[parseInt(match)]);
+};
+
+
+
+const PhoneInput = () => {
+  const [selectedCountry, setSelectedCountry] = useState({
+    name: 'Turkey',
+    code: '+۹۰',
+    flag: 'TR', 
+  });
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const countries = [
+    { name: 'Iran', code: '+۹۸', flag: 'IR' }, 
+    { name: 'Turkey', code: '+۹۰', flag: 'TR' },
+
+  ];
+
+  const handlePhoneNumberChange = (e) => {
+    const value = e.target.value;
+    setPhoneNumber(convertToPersianNumbers(value)); // Convert to Persian numbers as user types
+  };
+
+
+
+  const handleCountrySelect = (country) => {
+    setSelectedCountry(country);
+    setIsDropdownOpen(false);
+  };
 
   return (
-    <div className="w-full dark:bg-slate-700 flex items-center relative" dir='ltr' lang='en'>
-    
-      <PhoneInput
-        country={'ir'} 
-        value={phone}
-        onChange={(value) => setPhone(value)}
-        inputStyle={{
-          width: '100%',
-          direction:'ltr',
-          // width:'220px',
-          height: '56px',
-          border: '1px solid #D1D5DB', 
-          borderRadius: '0.375rem',
-          paddingLeft: '48px', 
-          fontSize: '14px',
-          textAlign: 'left',
-        
-        }}
-        buttonStyle={{
-          border: 'none',
-          background: 'transparent',
-          position: 'absolute',
-          left: '10px', 
-          // borderBottomLeftRadius:'5px solid #cccc',
-          // top: '6px',
-          padding: '0',
-          margin: '0',
-        }}
-        containerClass="relative"
-      />
+    <div className="relative  w-full max-w-sm" dir="ltr">
+      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden shadow-sm">
+        {/* Country Selector */}
+        <div
+          className="flex items-center cursor-pointer pl-2 border-r-2 pr-1"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-4 h-4 text-gray-500 pr-1 dark:text-white text-base"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d={isDropdownOpen ? 'M5 15l7-7 7 7' : 'M19 9l-7 7-7-7'}
+            />
+          </svg>
+          {/* Country Flag */}
+          <WorldFlag code={selectedCountry.flag} style={{ width: '20px', height: '20px' }} />
+          <span className="mx-2 text-sm text-gray-700 dark:text-white">{selectedCountry.code}</span>
+        </div>
+
+        {/* Phone Number Input */}
+        <input
+          type="text"
+          value={phoneNumber}
+          onChange={(e) => handlePhoneNumberChange(e)}
+          placeholder="۹۰۲۱۰۲۹۲۳۴"
+          className="flex-1 px-4 py-2 text-right focus:outline-none dark:bg-slate-700 dark:text-white "
+          style={{
+            fontFamily:'yekan',
+            border:'none',
+            width: '100%',
+            height: '56px',
+            borderRadius: '0.375rem',
+            fontSize: '14px',
+            textAlign: 'left',
+          }}
+        />
+
+        {/* Vertical Divider not used for now  */}
+        <div className="w-px h-8 bg-gray-300 "></div>
+
+      </div>
+
+      {/* Dropdown Menu */}
+      {isDropdownOpen && (
+        <div className="absolute  dark:bg-slate-700 dark:text-white right-0 z-10 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-full">
+          {countries.map((country) => (
+            <div
+              key={country.code}
+              className="flex  dark:bg-slate-700 dark:hover:bg-slate-800 dark:text-white items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+              onClick={() => handleCountrySelect(country)}
+            >
+              {/* flags*/}
+              <WorldFlag code={country.flag} className=' ' style={{ width: '20px', height: '20px' }} />
+              <span className="mx-2 text-sm">{country.name}</span>
+              <span className="text-gray-500 dark:text-white ">{country.code}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
-}
+};
+
+export default PhoneInput;
+
+

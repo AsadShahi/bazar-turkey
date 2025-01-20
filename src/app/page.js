@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>   
+    <div className="dark:slate-700">   
       <Navbar />
       <BreadCrumb />
       <Story />
@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       {/* <PassengerPanel/> */}
       <Footer />
-    </>
+    </div>
 
   );
 }
