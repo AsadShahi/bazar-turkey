@@ -45,7 +45,7 @@ export default function Hero() {
           height={200}
           src="/images/bug.png"
           alt="Luggage"
-          className="relative z-10 translate-y-8 -translate-x-1 w-[300px] h-[350px] mb-2 sm:w-[400px] sm:h-[212px] md:w-[450px] md:h-[440px]"
+          className="relative z-10 translate-y-8 -translate-x-1 md:translate-y-1  w-[300px] h-[350px] mb-2 sm:w-[400px] sm:h-[212px] md:w-[450px] md:h-[440px]"
         />
 
       
