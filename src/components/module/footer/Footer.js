@@ -30,7 +30,7 @@ export default function Footer() {
 
         <footer className="flex flex-col justify-center bg-white  dark:bg-gray-700 dark:text-white text-black py-6">
 
-            <div className='flex justify-end  bg-slate-100  dark:bg-slate-500  translate-y-10  py-14 md:py-20  z-2'>
+            <div className='flex justify-end  bg-slate-100   dark:bg-slate-500  translate-y-10  py-14 md:py-20 md:pl-24  z-2'>
            {/* button for got top site */}
                 <ScrolToTop />
             

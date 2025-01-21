@@ -29,7 +29,7 @@ export default function Hero() {
 
 
       {/* Right Column: Images */}
-      <div className="container flex justify-end  items-center w-full h-[231px] order-1 md:order-2 w-full md:w-[450px] md:h-[413px] sm:w-[231px] sm:h-[212px] h-auto md:ml-[133px] relative">
+      <div className="container flex justify-end  items-center w-full h-[212px] order-1 md:order-2 w-full md:w-[450px] md:h-[413px] sm:w-[231px] sm:h-[212px] h-auto md:ml-[133px] relative">
         {/* Top Cloud Image */}
         <Image
           src="/images/abr-first.png"
@@ -45,7 +45,7 @@ export default function Hero() {
           height={200}
           src="/images/bug.png"
           alt="Luggage"
-          className="relative z-10 translate-y-8 -translate-x-1 md:translate-y-1  w-[300px] h-[350px] mb-2 sm:w-[400px] sm:h-[212px] md:w-[450px] md:h-[440px]"
+          className="relative z-10 translate-y-8  md:translate-y-1  w-[300px] h-[350px] mb-2 sm:w-[400px] sm:h-[212px] md:w-[450px] md:h-[440px]"
         />
 
       
