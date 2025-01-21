@@ -12,9 +12,9 @@ const ThemeToggle = () => {
         className="text-orange-600 transition"
       >
         {darkTheme ? (
-          <IoMoonOutline className="text-2xl" />
-        ) : (
           <IoSunnyOutline className="text-2xl" />
+        ) : (
+          <IoMoonOutline className="text-2xl text-[#4d4d4d]" />
         )}
       </button>
     </div>

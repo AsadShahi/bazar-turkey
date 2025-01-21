@@ -17,8 +17,19 @@ export default function Hero() {
           مسافرتی جذاب با روشی نوین و امن کسب درآمد داشته باشند.
         </p>
 
+      
         <button className="flex mt-4 dark:bg-slate-700 dark:text-white items-center justify-center font-bold w-[221px] h-[56px] rounded-md bg-white text-orange-700">
-          <CiCalculator1 className="ml-2" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 22H14C19 22 21 20 21 15V9C21 4 19 2 14 2H10C5 2 3 4 3 9V15C3 20 5 22 10 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M16.5 7.58V8.58C16.5 9.4 15.83 10.08 15 10.08H9C8.18 10.08 7.5 9.41 7.5 8.58V7.58C7.5 6.76 8.17 6.08 9 6.08H15C15.83 6.08 16.5 6.75 16.5 7.58Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M8.13612 14H8.14767" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M11.9955 14H12.007" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15.8549 14H15.8664" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M8.13612 17.5H8.14767" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M11.9955 17.5H12.007" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M15.8549 17.5H15.8664" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+
           <p className='hidden sm:block'>برآورد پرداخت مسافر</p>
           <p className='md:hidden sm:block text-sm'>بررسی برآورد هزینه </p>
           <IoIosArrowBack className="mr-2" />

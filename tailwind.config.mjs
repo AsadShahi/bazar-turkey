@@ -12,11 +12,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        
-        'gray-color': '#383A40', // color for top navbar and footer copy write
+    
         orange:{
           700:"#FA5A2A",
-         }
+         },
+
       },
       
     },
