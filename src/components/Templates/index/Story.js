@@ -6,6 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
+import { IoIosShareAlt } from "react-icons/io";
+import { IoMdHeartHalf } from "react-icons/io";
+import { IoIosSend } from "react-icons/io";
 
 export default function PensionStory() {
   const slides = [
@@ -76,23 +79,23 @@ export default function PensionStory() {
       {/* Modal for Story View */}
       {selectedStory && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
+          className="fixed inset-0 flex items-center  justify-center bg-black bg-opacity-75 z-50"
           onClick={closeModal}
         >
           <div
-            className="relative bg-white rounded-lg p-4 w-11/12 md:w-2/3 lg:w-1/3"
+            className="relative bg-white dark:bg-slate-700  rounded-lg p-4 w-11/12 md:w-2/3 lg:w-1/3"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
           >
             <div className="absolute top-2 right-2 flex items-center space-x-2">
-              <span className="text-black font-semibold">مدیریت پنشن</span>
               <img
-                src="/images/profile.png"
+                src="/images/profile.jpg"
                 alt="Profile"
-                className="w-10 h-10 rounded-full"
+                className="w-10 h-10 ml-2 rounded-full"
               />
+              <span className="text-black font-semibold dark:text-white "> اسد شاهی</span>
             </div>
             <button
-              className="absolute top-2 left-2 text-black text-xl"
+              className="absolute top-2 left-2 text-black dark:text-white text-3xl"
               onClick={closeModal}
             >
               &times;
@@ -103,17 +106,24 @@ export default function PensionStory() {
                 alt={selectedStory.title}
                 className="w-full h-64 object-cover rounded-lg"
               />
-              <h2 className="text-xl mt-4">{selectedStory.title}</h2>
             </div>
             <div className="mt-4 flex items-center justify-between">
-              <input
-                type="text"
-                placeholder="نظر خود را اضافه کنید..."
-                className="w-full border border-gray-300 rounded-lg p-2"
-              />
-              <div className="flex space-x-4 ml-4">
-                <button className="text-red-500 text-2xl">❤</button>
-                <button className="text-blue-500 text-2xl">🔗</button>
+
+              <div className="relative w-full">
+                <input
+                  type="text"
+                  placeholder="نظر خود را ارسال کنید..."
+                  className="w-full border border-gray-100 dark:bg-slate-700 focus:outline-none text-sm rounded-lg p-2 pr-10"
+                />
+                <button className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300">
+                  <IoIosSend />
+                </button>
+              </div>
+
+
+              <div className="flex justify-around items-center mr-2">
+                <button className="text-red-500 text-2xl"><IoMdHeartHalf /></button>
+                <button className="text-blue-500 text-2xl"><IoIosShareAlt /> </button>
               </div>
             </div>
           </div>

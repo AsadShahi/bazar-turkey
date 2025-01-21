@@ -112,7 +112,7 @@ export default function Navbar() {
 
 
       {/*nav links  */}
-      <div className="hidden sm:flex bg-slate-100 dark:bg-slate-700 h-[64px] border-b-2 items-center">
+      <div className="hidden sm:flex bg-slate-100 dark:bg-slate-700 h-[64px] border-b items-center">
         <nav className="container mx-auto flex justify-between items-center px-4 space-x-reverse">
           <ul className="flex flex-wrap items-center space-x-4 rtl:space-x-reverse">
             <li>

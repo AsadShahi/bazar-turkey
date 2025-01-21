@@ -15,7 +15,7 @@ export default function ScrolToTop() {
 
     return (
         <button
-          className='py-4 px-4 md:mx-28 mx-2 bg-orange-700 dark:bg-slate-800  text-white rounded-full'
+          className='py-4 px-4 md:mx-28 mx-2 bg-orange-500 dark:bg-slate-800  text-white rounded-full'
           onClick={scrollToTop}
         >
           <FaArrowUp size={20} />

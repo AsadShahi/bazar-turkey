@@ -9,7 +9,7 @@ import BreadCrumb from '@/components/module/breadcrumb/BreadCrumb';
 export default function page() {
     return (
 
-        <div className='dark:bg-slate-700'>
+        <div className='dark:bg-slate-700 '>
             <Navbar />
             <BreadCrumb />
             <Story />

@@ -6,8 +6,9 @@ import { MdOutlineChevronLeft } from "react-icons/md";
 export default function BreadCrumb() {
   return (
 
-    <div className="bg-slate-100 dark:bg-slate-700 flex items-center h-[64px] border-b-2">
-    <div className="container flex flex-wrap items-center justify-between mx-auto py-3 px-7">
+
+    <div className=" bg-slate-100 dark:bg-slate-700 flex items-center h-[64px] border-b">
+    <div className="container mx-auto flex flex-wrap items-center justify-between mx-auto py-3 px-7">
       {/* Breadcrumb Navigation */}
       <div className="flex items-center  space-x-2 rtl:space-x-reverse">
         <Link

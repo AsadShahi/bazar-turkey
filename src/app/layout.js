@@ -15,11 +15,16 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Turky Bazar",
   description: "AsadShahi.........",
+  htmlAttributes: {
+    dir: "rtl",
+    lang: "fa",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html dir="rtl" lang="fa">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

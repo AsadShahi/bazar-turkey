@@ -4,6 +4,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/**/*.{html,js}'
   ],
   darkMode: 'class', 
   theme: {
@@ -21,6 +22,7 @@ export default {
     },
     container: {
       center: true,
+        
     },
 
   },

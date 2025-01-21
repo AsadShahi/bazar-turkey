@@ -11,7 +11,7 @@ export default function PassengerForm() {
   return (
     <div className="container sm:w-full lg:w-[1244px] h-auto sm:h-auto">
 
-      <div className="container flex  items-center mt-5 justify-between sm:w-full lg:w-[1244px]">
+      <div className="container flex  items-center mt-5 justify-between px-auto sm:w-full  lg:w-[1244px]">
         <p className="hidden sm:block font-bold flex items-center dark:text-white border-r-4 border-orange-700 pr-1 mr-1 text-sm sm:text-base md:text-sm lg:text-xl">
           فرم ثبت نام برای دریافت کمک هزینه ارسال بار
         </p>
@@ -49,7 +49,7 @@ export default function PassengerForm() {
           <div className="w-full">
             <form className="w-full  dark:bg-slate-700  rounded-lg p-6 space-y-6">
 
-              <div className="w-full mb-1 border-b-2 pb-2 flex items-center">
+              <div className="w-full mb-1 border-b pb-2 flex items-center">
                 <p className="w-[110px] h-[28px] border-r-4 border-orange-700 text-center font-bold">مرحله اول</p>
                 <p className="text-lg dark:text-white h-[28px] text-center text-slate-600 border-r-2 pr-3">اطلاعات مسافر</p>
               </div>
