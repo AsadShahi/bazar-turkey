@@ -73,7 +73,7 @@ const PhoneInput = () => {
           value={phoneNumber}
           onChange={(e) => handlePhoneNumberChange(e)}
           placeholder="۹۰۲۱۰۲۹۲۳۴"
-          className="flex-1 px-4 py-2 text-right focus:outline-none dark:bg-slate-700 dark:text-white "
+          className="flex-1 px-4 py-2 text-right focus:outline-none dark:bg-[#25272C] dark:text-white "
           style={{
             fontFamily:'yekan',
             border:'none',
@@ -92,11 +92,11 @@ const PhoneInput = () => {
 
       {/* Dropdown Menu */}
       {isDropdownOpen && (
-        <div className="absolute  dark:bg-slate-700 dark:text-white right-0 z-10 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-full">
+        <div className="absolute  dark:bg-[#25272C] dark:text-white right-0 z-10 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-full">
           {countries.map((country) => (
             <div
               key={country.code}
-              className="flex  dark:bg-slate-700 dark:hover:bg-slate-800 dark:text-white items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+              className="flex  dark:bg-[#25272C] dark:hover:bg-slate-800 dark:text-white items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
               onClick={() => handleCountrySelect(country)}
             >
               {/* flags*/}

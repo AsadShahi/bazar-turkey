@@ -7,13 +7,13 @@ export default function BreadCrumb() {
   return (
 
 
-    <div className="bg-slate-100 dark:bg-slate-700 flex items-center h-[64px] border-b">
-      <div className="container mx-auto flex flex-wrap items-center justify-between mx-auto py-3 px-7">
+    <div className="bg-[#F6F6F6] dark:bg-[#25272C] flex items-center h-[64px] border-b">
+      <div className="container mx-auto flex items-center  mx-auto py-4 px-2">
         {/* Breadcrumb Navigation */}
-        <div className="flex items-center  space-x-2 rtl:space-x-reverse">
+        <div className="flex items-center gap-[9px]  md:gap-[9px]">
           <Link
-            href="/"
-            className="text-slate-700  dark:text-white hover:text-orange-700 font-medium transition"
+            href="/"                 
+            className="text-[#4D4D4D]  dark:text-white hover:text-orange-700 font-medium transition"
           >
             خانه
           </Link>
@@ -22,12 +22,13 @@ export default function BreadCrumb() {
           </svg>
           <Link
             href="/passenger-panel"
-            className="text-slate-700  dark:text-white hover:text-orange-700 font-medium transition"
+            className="text-[#4D4D4D]  dark:text-white hover:text-orange-700 font-medium transition"
           >
             <p className='md:hidden sm:block'>ثبت محصول</p>
             <p className='md:block hidden'> پنل مسافران</p>
           </Link>
         </div>
+
       </div>
     </div>
 

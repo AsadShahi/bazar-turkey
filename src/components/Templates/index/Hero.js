@@ -8,7 +8,7 @@ import { IoIosArrowBack } from "react-icons/io";
 export default function Hero() {
   return (
 
-    <div className="bg-orange-700 dark:bg-slate-800 items-center  md:h-[351px] text-white flex flex-col md:flex-row   ">
+    <div className="bg-orange-700 dark:bg-[slate-800] items-center  md:h-[351px] text-white flex flex-col md:flex-row   ">
       {/* Left Column: Text */}
       <div className="md:flex-1 mx-4 md:mx-24 my-8 text-center md:text-left order-2 md:order-1">
         <p className="text-2xl text-right md:text-2xl font-bold">پنل مسافران</p>
@@ -18,7 +18,7 @@ export default function Hero() {
         </p>
 
       
-        <button className="flex mt-4 dark:bg-slate-700 dark:text-white items-center justify-center font-bold w-[221px] h-[56px] rounded-md bg-white text-orange-700">
+        <button className="flex mt-4 dark:bg-[#25272C] dark:text-white items-center justify-center font-bold w-[221px] h-[56px] rounded-md bg-white text-orange-700 gap-[17px] md:gap-[8px]">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 22H14C19 22 21 20 21 15V9C21 4 19 2 14 2H10C5 2 3 4 3 9V15C3 20 5 22 10 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M16.5 7.58V8.58C16.5 9.4 15.83 10.08 15 10.08H9C8.18 10.08 7.5 9.41 7.5 8.58V7.58C7.5 6.76 8.17 6.08 9 6.08H15C15.83 6.08 16.5 6.75 16.5 7.58Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

@@ -24,7 +24,7 @@ export default function PassengerForm() {
     <section className="bg-white container mt-5 border-t-4 py-8">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-4">
         {/* Image Section */}
-        <div className="w-full lg:w-1/4 border-dotted border-2 border-indigo-600 rounded-md flex items-center justify-center flex-col h-44 bg-slate-100">
+        <div className="w-full lg:w-1/4 border-dotted border-2 border-indigo-600 rounded-md flex items-center justify-center flex-col h-44 bg-[#F6F6F6]">
           <CiCamera size={40} />
           <p className="mt-2">تصویر مسافر (عکس سلفی)</p>
           <button className="bg-orange-700 py-2 px-4 text-sm text-white rounded-sm mt-4 hover:bg-orange-800">گرفتن عکس</button>
@@ -34,7 +34,7 @@ export default function PassengerForm() {
 
         {/* Form Section */}
         <div className="w-full lg:w-3/4">
-          <form className="bg-gray-50 dark:bg-slate-800 shadow rounded-lg p-6 space-y-6">
+          <form className="bg-gray-50 dark:bg-[#383A40] shadow rounded-lg p-6 space-y-6">
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>

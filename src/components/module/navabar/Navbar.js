@@ -10,10 +10,10 @@ import WorldFlag from 'react-world-flags'; // Import WorldFlag component
 
 export default function Navbar() {
   return (
-    <div className="mb-16 md:mb-0 dark:bg-slate-700">
-      {/* Top Announcement Bar */}
+    <div className="mb-16 md:mb-0 dark:bg-[#25272C]">
 
-      <div className=" flex items-center h-[58px] bg-gray-800 text-white px-4 md:px-8">
+      {/* Top Announcement Bar */}
+      <div className=" flex items-center h-[58px] bg-[#383A40] text-white px-4 md:px-8">
         <div className="flex justify-between items-center w-full">
           <p className="text-sm md:text-base">به وبسایت بازار ترکیه خوش امدید</p>
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
@@ -39,8 +39,15 @@ export default function Navbar() {
           {/* right Section */}
 
           {/* Menu Button */}
-          <button className="order-1 md:order-2 dark:bg-slate-800 text-orange-600 bg-gray-100 p-2 rounded transition">
-            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button className="order-1 md:order-2 flex items-center justify-center dark:bg-[#383A40] text-orange-600 bg-gray-100  p-2  md:h-[48px] md:w-[48px] rounded transition">
+
+            {/* show in mobile */}
+            <svg className='' width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.29297 1.66666H19.6263M1.29297 8.54166H19.6263M1.29297 15.4167H19.6263" stroke="#FA5A2A" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+
+            {/* show in desktop */}
+            <svg className='hidden' width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.5 5H22.5M12.5 9.66667H22.5M2.5 14.3333H22.5M2.5 19H22.5" stroke="#FA5A2A" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
 
@@ -95,7 +102,7 @@ export default function Navbar() {
           <div className="relative flex items-center  w-full md:max-w-[782px] order-4 md:order-3">
             <input
               type="text"
-              className="w-full dark:bg-slate-700  dark:text-white bg-gray-100 px-10 mx-2 py-2 rounded-lg border border-gray-300 focus:outline-none "
+              className="w-full dark:bg-[#3A3C42] border-0  dark:text-white bg-gray-100 px-10 mx-2 h-[40px] md:h-[48px]  rounded-lg border border-gray-300 focus:outline-none "
               placeholder="کالای مورد نظر خود را جستجو کنید"
             />
             {/* seach icon */}
@@ -109,11 +116,14 @@ export default function Navbar() {
           {/* left section  */}
           <div className="flex items-center justify-between   order-3 md:order-4 gap-[8px] md:gap-[16px]">
 
-            {/* Notifications Icon */}
+            {/* Notifications Icon bell */}
             <Link href="/notifications" className="text-[#4D4D4D] dark:text-orange-700 hover:text-orange-600 transition border-l-2 pl-2">
-              <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.60677 16.0833C6.13383 16.8389 7.00951 17.3333 8.00065 17.3333C8.99179 17.3333 9.86747 16.8389 10.3945 16.0833M6.37556 3.16666H9.62575C10.6558 3.16666 11.5804 3.79845 11.9548 4.75809L13.5708 10.6667C13.6753 10.9346 13.8419 11.174 14.0569 11.365L14.1719 11.4673C14.487 11.7474 14.6673 12.1489 14.6673 12.5705C14.6673 13.3857 14.0065 14.0465 13.1913 14.0465H2.81003C1.99483 14.0465 1.33398 13.3857 1.33398 12.5705C1.33398 12.1489 1.51428 11.7474 1.8294 11.4673L1.94443 11.365C2.1594 11.174 2.32599 10.9346 2.43051 10.6667L4.0465 4.75809C4.42085 3.79845 5.34548 3.16666 6.37556 3.16666ZM9.25065 1.91666C9.25065 2.60701 8.69101 3.16666 8.00065 3.16666C7.31029 3.16666 6.75065 2.60701 6.75065 1.91666C6.75065 1.2263 7.31029 0.666656 8.00065 0.666656C8.69101 0.666656 9.25065 1.2263 9.25065 1.91666Z" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" />
+
+
+              <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.12734 19.5C6.75982 20.4067 7.81063 21 9 21C10.1894 21 11.2402 20.4067 11.8727 19.5M7.04989 4H10.9501C12.1862 4 13.2958 4.75815 13.745 5.90972L15.6842 13C15.8096 13.3215 16.0095 13.6088 16.2675 13.8381L16.4055 13.9608C16.7836 14.2969 17 14.7787 17 15.2846C17 16.2628 16.207 17.0559 15.2287 17.0559H2.77126C1.79302 17.0559 1 16.2628 1 15.2846C1 14.7787 1.21635 14.2969 1.5945 13.9608L1.73254 13.8381C1.9905 13.6088 2.1904 13.3215 2.31584 13L4.25502 5.90972C4.70424 4.75815 5.8138 4 7.04989 4ZM10.5 2.5C10.5 3.32843 9.82843 4 9 4C8.17157 4 7.5 3.32843 7.5 2.5C7.5 1.67157 8.17157 1 9 1C9.82843 1 10.5 1.67157 10.5 2.5Z" stroke="currentColor" strokeWidth="1.5" strokeWinecap="round" />
               </svg>
+
 
             </Link>
 
@@ -127,7 +137,7 @@ export default function Navbar() {
 
               <Link
                 href="/login"
-                className="flex items-center dark:bg-slate-800 text-white bg-orange-600 mx-2 px-3 py-2 rounded-md transition"
+                className="flex items-center dark:bg-[#383A40] text-white bg-orange-600 mx-2 px-3 py-2 rounded-md transition"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.5 8L16.3586 11.8586C16.3976 11.8976 16.4172 11.9488 16.4172 12M12.5 16L16.3586 12.1414C16.3976 12.1024 16.4172 12.0512 16.4172 12M16.4172 12H3.5M7.5 6V5C7.5 3.34315 8.84315 2 10.5 2H17.5C19.1569 2 20.5 3.34315 20.5 5V19C20.5 20.6569 19.1569 22 17.5 22H10.5C8.84315 22 7.5 20.6569 7.5 19V18" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
@@ -137,7 +147,7 @@ export default function Navbar() {
 
               <Link
                 href="/register"
-                className="flex items-center dark:text-white dark:bg-slate-800 text-orange-600 border border-orange-600 px-3 py-2 rounded-md transition"
+                className="flex items-center dark:text-white dark:bg-[#383A40] text-orange-600 border border-orange-600 px-3 py-2 rounded-md transition"
               >
                 <svg
                   width="24"
@@ -190,8 +200,10 @@ export default function Navbar() {
 
 
       {/*nav links  */}
-      <div className="hidden sm:block bg-slate-100 dark:bg-slate-700 h-[64px] border-b items-center">
-        <nav className="container mx-auto flex justify-between items-center px-4 space-x-reverse">
+      <div className="hidden sm:block flex items-center bg-[#F6F6F6] dark:bg-[#3A3C42] py-4 border-b ">
+
+        <nav className="container mx-auto flex justify-between items-center px-4 ">
+
           <ul className="flex flex-wrap items-center space-x-4 gap-[12px]">
             <li>
               <Link
@@ -236,7 +248,7 @@ export default function Navbar() {
               </Link>
             </li>
 
-            <li className="bg-orange-600   dark:bg-slate-800 dark:text-white px-3 py-1 rounded-sm">
+            <li className="bg-orange-600  px-3 py-1 rounded-sm">
               <Link
                 href="/"
                 className="text-white gap-[8px] px-2 flex items-center"
@@ -271,6 +283,8 @@ export default function Navbar() {
               سبد خرید
             </Link>
           </div>
+
+
         </nav>
       </div>
 

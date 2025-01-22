@@ -19,7 +19,7 @@ export default function PassengerForm() {
           فرم ثبت نام
         </p>
 
-        <button className="flex items-center justify-between py-2.5 ml-2 dark:bg-slate-800 bg-slate-700 rounded-md px-3 text-white text-xs sm:text-sm md:text-base lg:text-lg">
+        <button className="flex items-center justify-between py-2.5 ml-2 dark:bg-[#383A40] bg-slate-700 rounded-md px-3 text-white text-xs sm:text-sm md:text-base lg:text-lg">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.4 22H5.6C4.71634 22 4 21.2538 4 20.3333M4 20.3333C4 19.4129 4.71634 18.6667 5.6 18.6667H19.4667C19.7612 18.6667 20 18.4179 20 18.1111V2.55556C20 2.24873 19.7612 2 19.4667 2H6.66667C5.19391 2 4 3.24366 4 4.77778V20.3333ZM16.8 2.00001V9.58538C16.8 9.75278 16.5871 9.84002 16.4557 9.72648L14.6899 8.20058C14.3756 7.92899 13.8911 7.92899 13.5768 8.20058L11.8109 9.72648C11.6795 9.84002 11.4667 9.75278 11.4667 9.58538V2" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
@@ -31,7 +31,7 @@ export default function PassengerForm() {
 
 
       {/* main content form and image */}
-      <div className="container bg-white dark:bg-slate-700   border-t-2 mt-5 py-8 dark:text-white  w-full mx-auto px-4 flex flex-col lg:flex-row gap-4">
+      <div className="container bg-white dark:bg-[#25272C]   border-t-2 mt-5 py-8 dark:text-white  w-full mx-auto px-4 flex flex-col lg:flex-row gap-4">
 
         {/* Image Section */}
         <div className="w-full   h-[241px] sm:h-[241.14px]  sm:w-[252px] border-dashed border-2 border-slate-500 rounded-md flex items-center justify-center flex-col p-4">
@@ -44,7 +44,7 @@ export default function PassengerForm() {
               </svg>
             </div>
             <p className="mt-2 text-xs sm:text-sm">تصویر مسافر (عکس سلفی)</p>
-            <button className="bg-orange-700 dark:bg-slate-800 py-2 px-4 text-xs sm:text-sm text-white rounded-sm mt-4 hover:bg-orange-800">
+            <button className="bg-orange-700 dark:bg-[#383A40] py-2 px-4 text-xs sm:text-sm text-white rounded-sm mt-4 hover:bg-orange-800">
               گرفتن عکس
             </button>
           </div>
@@ -53,7 +53,7 @@ export default function PassengerForm() {
 
         {/* Form Section */}
         <div className="w-full">
-          <form className="w-full  dark:bg-slate-700  rounded-lg p-6 space-y-6">
+          <form className="w-full  dark:bg-[#25272C]  rounded-lg p-6 space-y-6">
 
             <div className="w-full mb-1 border-b pb-2 flex items-center">
               <p className="w-[110px] h-[28px] border-r-4 border-orange-700 text-center font-bold">مرحله اول</p>
@@ -69,7 +69,7 @@ export default function PassengerForm() {
                 <input
                   type="text"
                   placeholder="ارمان میمندی"
-                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
                 />
               </div>
 
@@ -81,7 +81,7 @@ export default function PassengerForm() {
                 <input
                   type="text"
                   placeholder="خودم"
-                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
                 />
               </div>
 
@@ -92,7 +92,7 @@ export default function PassengerForm() {
                 <input
                   type="text"
                   placeholder="ازاد"
-                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
                 />
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function PassengerForm() {
                 <input
                   type="text"
                   placeholder="آدرس: تهران، خیابان نلسون ماندلا (جردن سابق)"
-                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
                 />
               </div>
 
@@ -140,7 +140,7 @@ export default function PassengerForm() {
                 <input
                   type="text"
                   placeholder="آدرس: تهران، خیابان نلسون ماندلا (جردن سابق)"
-                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
                 />
               </div>
 
@@ -163,7 +163,7 @@ export default function PassengerForm() {
                 <input
                   type="text"
                   placeholder="نام و نام خانوادگی"
-                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
                 />
               </div>
 
@@ -174,7 +174,7 @@ export default function PassengerForm() {
                 <input
                   type="text"
                   placeholder="پدر"
-                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                  className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
                 />
               </div>
 
@@ -194,7 +194,7 @@ export default function PassengerForm() {
               <input
                 type="text"
                 placeholder="آدرس: تهران، خیابان نلسون ماندلا (جردن سابق)"
-                className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                className="w-full h-[56px] px-4 focus:outline-none border border-gray-300 rounded-md shadow-sm dark:bg-[#25272C] dark:text-white dark:border-gray-600"
               />
             </div>
 
@@ -235,14 +235,14 @@ export default function PassengerForm() {
             <div className="flex  items-center justify-between   sm:justify-between md:justify-start mt-6">
               <button
                 type="button"
-                className="py-3 px-4 dark:bg-slate-800 bg-gray-100 flex items-center text-slate-300 font-bold rounded-md"
+                className="py-3 px-4 dark:bg-[#383A40] bg-gray-100 flex items-center text-slate-300 font-bold rounded-md"
               >
                 <IoIosArrowForward className="ml-2" /> مرحله قبل
               </button>
 
               <button
                 type="submit"
-                className="flex items-center dark:bg-slate-800 py-3 px-4 mx-4 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600 focus:ring-2 focus:ring-orange-400"
+                className="flex items-center dark:bg-[#383A40] py-3 px-4 mx-4 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600 focus:ring-2 focus:ring-orange-400"
               >
                 مرحله بعد <IoIosArrowBack className="mr-2" />
               </button>
