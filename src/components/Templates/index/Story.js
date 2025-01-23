@@ -39,7 +39,7 @@ export default function PensionStory() {
   };
 
   return (
-    <section className="bg-[#F6F6F6] py-7 dark:bg-[#25272C] dark:text-white">
+    <section className="bg-[#F6F6F6] py-7 dark:bg-[#25272C] dark:text-white md:z-50	">
       <div className="container mx-auto px-4">
         <Swiper
           spaceBetween={10}

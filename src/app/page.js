@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
+
     <div className="dark:bg-[#383A40]">   
       <Navbar />
       <BreadCrumb />

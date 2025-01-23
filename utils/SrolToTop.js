@@ -15,7 +15,7 @@ export default function ScrolToTop() {
 
   return (
     <button
-      className='hidden sm:block py-4 px-4 md:mx-28 mx-2  dark:bg-[#383A40]  text-white rounded-full'
+      className='hidden sm:block py-3 px-3   dark:bg-[#383A40]  text-white rounded-full'
       style={{ backgroundColor: '#FA5A2A26' }}
       onClick={scrollToTop}
     >

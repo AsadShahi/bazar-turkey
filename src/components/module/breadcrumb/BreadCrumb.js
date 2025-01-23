@@ -8,7 +8,7 @@ export default function BreadCrumb() {
 
 
     <div className="bg-[#F6F6F6] dark:bg-[#25272C] flex items-center h-[64px] border-b">
-      <div className="container mx-auto flex items-center  mx-auto py-4 px-2">
+      <div className="container mx-auto flex items-center  mx-auto py-4 px-2.5">
         {/* Breadcrumb Navigation */}
         <div className="flex items-center gap-[9px]  md:gap-[9px]">
           <Link

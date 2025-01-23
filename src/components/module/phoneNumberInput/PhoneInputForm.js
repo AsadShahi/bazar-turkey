@@ -42,7 +42,7 @@ const PhoneInput = () => {
 
   return (
     <div className="relative  w-full max-w-sm" dir="ltr">
-      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden shadow-sm">
+      <div className="flex items-center border border-gray-300 dark:border-[#383A40] rounded-lg overflow-hidden shadow-sm">
         {/* Country Selector */}
         <div
           className="flex items-center cursor-pointer pl-2 border-r-2 pr-1"
@@ -85,8 +85,7 @@ const PhoneInput = () => {
           }}
         />
 
-        {/* Vertical Divider not used for now  */}
-        <div className="w-px h-8 bg-gray-300 "></div>
+      
 
       </div>
 
